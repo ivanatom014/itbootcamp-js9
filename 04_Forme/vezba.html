@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezba</title>
+</head>
+<body>
+    
+<form action="test.php" method="post" >
+<fieldset>
+<legend>Form Validation:</legend>
+<p>
+    <label for="ime">Name:</label>
+    <input type="text" name="Name" value="" id="ime">
+</p>
+
+<p>
+    <label for="username">UserName:</label>
+    <input type="text" name="User" maxlength="12" value="" id="username">
+</p>
+
+<p>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+</p>
+<p>
+    <label for="re-p">Re-type password::</label>
+    <input type="password" name="re-p" id="re-p">
+</p>
+
+<p>
+    <label for="Genger:">Genger:</label>
+    <input type="radio" name="Genger" id="M" value="m"> Male
+    <input type="radio" name="Genger" id="F" value="z"> Female
+    <input type="radio" name="Genger" id="0"> Other
+</p>
+
+<p>
+    <label for="ps">Programming skills:</label>
+    <input type="checkbox" name="ps" id="Java" value="java">Java
+    <input type="checkbox" name="ps" id="Android" value="Android">Android
+    <input type="checkbox" name="ps" id="Ruby" value="Ruby">Rubi
+    <input type="checkbox" name="ps" id="Net" value="net">Net
+</p>
+<p>
+    <label for="Cont">Contact no:</label>
+    <input type="number" name="Cont" id="Cont">
+</p>
+<p>
+    <label for="em">Email:</label>
+    <input type="email" name="em" id="em">
+</p>
+<p>
+    <label for="coll">College:</label>
+    <select name="coll" id="college">
+        <option disabled selected value> Select college </option>
+        <option value="Law">Law</option>
+        <option value="Economic">Economic</option>
+        <option value="Traffic">Traffic</option>
+    </select>
+</p>
+<input type="submit" value="Submit">
+
+</fieldset>
+</form>
+<br>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

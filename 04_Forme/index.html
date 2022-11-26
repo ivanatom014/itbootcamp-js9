@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="test.php" method="get" >
+<fieldset>
+<legend>Osnovni podaci:</legend>
+<p>
+    <label for="ime">Ime i Prezime:</label>
+    <input type="text" maxlength="8" value="" placeholder="unesi ime" id="ime" name="ime">
+</p>
+
+<p>
+    <label for="username">Korisnicko ime:</label>
+    <input type="text" maxlength="12" value="" placeholder="unesi korisnicko ime" id="username">
+</p>
+
+<p>
+    <label for="ps">Lozinka:</label>
+    <input type="password" id="ps">
+</p>
+
+<p>
+    <label for="godine">Godine:</label>
+    <input type="number" id="godine" min="18"
+    step="2">
+</p>
+
+<p>
+    <label for="em">Email</label>
+    <input type="email" id="em">
+</p>
+
+<p>
+    <label for="pol">Odaberitte pol:</label>
+    <input type="radio" name="pol" id="z" value="z">Zensko
+    <input type="radio" name="pol" id="m" value="m"> Muski
+    <input type="radio" name="pol" id="d"> Drugo
+</p>
+
+<p>
+    <label for="pj">Odaberite programski jezik</label>
+    <input type="checkbox" name="pj" id="html" value="html">HTML
+    <input type="checkbox" name="pj" id="css" value="css">CSS
+    <input type="checkbox" name="pj" id="js">JS
+</p>
+
+<p>
+    <label for="grad">Grad</label>
+
+    <select name="grad" id="grad">
+        <optgroup label="Centralna Srbija" >
+
+            <option value="kg">Kragujevac</option>
+            <option value="bg">Beograd</option>
+
+        </optgroup>
+
+        <optgroup label="Juzna Srbija" >
+
+            <option value="Nis">Nis</option>
+        </optgroup>
+    
+</select>
+</p>
+
+<p>
+    <label for="iskustva">Koja su vasa iskustva</label>
+    <textarea name="iskustva" id="iskustva" cols="30" rows="10"></textarea>
+</p>
+
+<input type="submit" value="Posalji">
+
+</fieldset>
+</form>
+</body>
+</html>
