@@ -1,0 +1,36 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th{
+    font-weight: bold;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.prva tr:nth-child(3) {
+    background-color: yellow;
+}
+
+.druga td:nth-child(3), .druga th:nth-child(3)  {
+    background-color: yellow;
+}
+
+
+.prva tr:nth-child(odd) {
+    font-style: italic;
+    
+}
+
+.druga tr:nth-child(even):hover {
+    background-color: yellow;
+}
+
+.druga tr:nth-child(3n) {
+    color: blue;
+}

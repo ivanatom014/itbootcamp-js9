@@ -1,0 +1,17 @@
+header {
+    background-image: url('photo.jpg')  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+div { color: rgb(9, 9, 9);
+    font-size: 20px;
+    position: absolute;
+   
+    top: 48%;
+    width: 100%;
+    text-align: center;
+}
