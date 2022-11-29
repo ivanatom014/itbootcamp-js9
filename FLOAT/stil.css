@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.topbar ul {
+    overflow: hidden;
+    list-style: none;
+
+}
+
+.topbar ul li {
+    background-color: brown;
+    width: 25%;
+    float: left;
+    border: 1px solid white;
+    text-align: center;
+  
+}
+
+.topbar a {
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    background-color: chocolate;
+}
+
+/* Verticalni meni */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+background-color: tomato;
+width: 25%;
+border: 1px solid white;
+}
+
+footer a {
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    background-color: rgb(16, 8, 71);
+}
+
+
+/* Submenu */
+
+.submenu {
+    display: none;
+}
+
+.topbar ul li:nth-child(4):hover .submeni {
+display: block;
+
+}

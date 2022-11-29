@@ -1,0 +1,15 @@
+div{
+    background-color: brown;
+    overflow: hidden;
+}
+
+p{
+    background-color: blanchedalmond;
+    width: 220px;
+    height: 25px;
+    border: 1px solid black;
+    float: right;
+}
+p:nth-child(2){
+    float: left;
+}
