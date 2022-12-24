@@ -1,0 +1,32 @@
+let x, y;
+x = 3;
+y = 3;
+z = 40;
+console.log(x == y);
+
+if(x >= y) 
+{
+    console.log("Vrednosti promenljivih x i y su jednake");
+    console.log("Jos jedna poruka");
+    console.log("Vrednosti " + x + " i " + y + " su jednake.");
+    console.log(`Vrednosti ${x} i ${y} su jednake`);
+}
+
+console.log("Komanda psole if granja");
+
+x =  5
+x = 4.5
+x = "4"
+y = '4';
+if(x === y) 
+{
+    console.log(`Vrednosti x i y su jednake po tipu i po vrednosti`);
+}
+
+x = "4"
+y = "4"
+if(x !== y)
+{
+    console.log(`Vrednosti x i y su razlicite po tipu ili po vrednosti`);
+}
+
