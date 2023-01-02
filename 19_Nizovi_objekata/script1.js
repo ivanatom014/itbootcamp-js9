@@ -125,3 +125,71 @@ let printBlogs = username =>{
 }
 
 printBlogs("Stefan");
+
+// Ispisati imena onih autora koji imaju ukupno više od 100 lajkova za blogove koje su napisali
+
+
+users.forEach(user => {
+    let blogs = user.blogs; // niz blogova tekućeg user-a
+    let sum = 0;
+    blogs.forEach(blog => {
+        sum += blog.likes     
+    });
+
+    if(sum > 100) {
+        console.log(user.username);
+    }
+});
+
+// Ispisati naslove onih blogova koji imaju natprosečan broj pozitivnih ocena
+
+let avglikes = user => {
+    let sum = 0;
+    let br = 0;
+     for(let i=0; i < user.length; i++){
+       let user = users[i]; // Ovo daje objekat user (jedan element iz niza users)
+       let blogs = user.blogs; // ovo daje niz blogova za selektovanog korisnika
+       for(let j = 0; j < blogs.length; j++){
+       let blog = blogs[j]
+        sum += blog.likes;
+        br ++; //  Dodajem da sam naisla na jos jedan blog
+       }
+     }
+     return sum/ br;
+}
+
+let iznadProsekaLajkovi = users => {
+    let prosekLajkova = avglikes(users);
+    for(let i = 0; i < users.length; i++) {
+        let user = users[i];
+        let blogs = user.blogs;
+        for(let j = 0; j < blogs.length; j++) {
+            let blog = blogs[j];
+            if(blog.likes > prosekLajkova) {
+                console.log(blog.title);
+            }
+        }
+    }
+}
+console.log(`Prosecan broj lajkova je ${avglikes(users)}`);
+iznadProsekaLajkovi(users);
+
+/*
+users.forEach(user =>{
+    let blogs = user.blogs;
+    let suma = 0;
+    let brojac = 0;
+    blogs.forEach(blog =>{
+        suma += blog.likes;
+        brojac++;
+    })
+   let ars = suma / brojac
+   blogs.forEach(blog =>{
+    if(blog.likes > ars){
+        console.log(blog.title);
+    }
+   })
+})  
+*/
+
+// samo se dislikes menja
