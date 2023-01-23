@@ -20,5 +20,7 @@ for(let i=0; i <li.length;i++){
     console.log(slike[i]);
 }
 
+// Dohvatiti poslednji red u tabeli.
+
 let r = document.querySelector("tr:last-child");
 console.log(r);

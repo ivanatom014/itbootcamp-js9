@@ -128,7 +128,13 @@ linkovi[i].style.padding = "5px";
 
 // Svim slikama na stranici koja su sa ekstenzijom .png, postaviti okvir na debljinu 2px i crvenu boju. 
 
-
+let svimslikama = document.getElementsByTagName("img");
+for(let i = 0; i <svimslikama.length;i++){
+    if(svimslikama[i].src.includes(".png")){
+        svimslikama[i].style.border = "2px solid red";
+        svimslikama[i].style.marginLeft = "5px";
+    }
+}
 
  let table = document.querySelector("table");
  console.log(table.parentNode);

@@ -35,7 +35,7 @@ btnEvents.addEventListener("dblclick",()=>{
 
 //////// ////// //////
 
-/* Napraviti dugme klikom na koje se u konzoli ispisuje vrednost brojača br. Brojač na početku ima vrednost 1, a svaki put kada se klikne na dugme povećati vrednost brojača za 1. */
+/* Napraviti dugme klikom na koje se u konzoli ispisuje vrednost brojača br. Brojač na početku ima vrednost 1, a svaki put kada se klikne na dugme povećati vrednost brojača za 1. */      
 
 let btnBrojac = document.getElementById("brojac");
 let brojac = 1;
@@ -138,6 +138,8 @@ btnIzracunaj2.addEventListener("click", () =>{
 
 
 ////////////////////// Povrsina kruga ///////
+
+
 let inputPovrsina = document.getElementById("povrsina");
 let spanPovrsina = document.getElementById("prikazPovrsina");
 let btnIzracunaj3 = document.getElementById("izracunaj3");
