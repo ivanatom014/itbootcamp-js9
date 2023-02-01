@@ -8,36 +8,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container"> 
     <header>
-        <h1>ITBootcamp Chat</h1>
-        <h2>Choose a chatroom</h2>
+      <div class="row">
+        <h1 class="col-4">&nbsp;</h1>
+        <h1 class="col-4">ITBootcamp Chat</h1>
+        <h1 class="col-4">&nbsp;</h1>
+      </div>
+
+       <div class="row">
+        <p class="col-4">&nbsp;</p>
+        <h2 class="col-4">Choose a chatroom</h2>
+        <h2 class="col-4">&nbsp;</h2>
+       </div>
     </header>
 
-<nav>
-<button id="btngeneral">#general</button>
-<button id="btnjs">#js</button>
-<button id="btnhome">#homeworks</button>
-<button id="btntests">#tests</button>
+<nav class="row">
+  <p class="col-2">&nbsp;</p>
+
+  <button id="btnGeneral" class="btn1 col-2">#general</button>
+  <button id="btnJs" class="btn1 col-2">#js</button>
+  <button id="btnHomeworks" class=" btn1 col-2"">#homeworks</button>
+  <button id="btnTests" class=" btn1 col-2">#tests</button>
+
+  <p class="col-2">&nbsp;</p>
+
 </nav>
 
-<br>
-<section>
-  <ul></ul>
+
+<section class="row">
+  <p class="col-3">&nbsp;</p>
+  <ul id="message" class="col-5"></ul>
+   <p class="col-4">&nbsp;</p>
 </section>
 
 
 
-<div class="container">
-<div class="footer">
-<input type="text" name="message" id="inputmsg" placeholder="Your message...">
-<input type="submit" value="Send" id="Send">
+
+<div class="inputi">
+  <div id="btnin" class="row pozicija1">
+
+    <p class="col-3">&nbsp;</p>
+    <input class="col-4" type="text" name="message" id="inputmsg" placeholder="Your message...">
+    <input class="col-2 btn" type="submit" value="Send" id="Send">
+    <p class="col-3">&nbsp;</p>
+</div>
 </div>
 
 
-<div class="footer">
-<input type="text" name="username" id="inputuser" placeholder="Update username">
-<input type="submit" value="Update" id="Update">
+<div class="inputi">
+  <div id="btnin" class="row pozicija2">
+
+    <p class="col-3">&nbsp;</p>
+    <input class="col-4" type="text" name="username" id="inputuser" placeholder="Update username">
+    <input class="col-2 btn" type="submit" value="Update" id="Update">
+    <p class="col-3">&nbsp;</p>
+
 </div>
+</div>
+
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
