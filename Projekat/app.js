@@ -14,7 +14,7 @@ if(localStorage.username) {
     username = localStorage.username;
 }
 
-let chatroom = new Chatroom("#js", username);
+let chatroom = new Chatroom("#general", username);
 /*let chatroom1 = new Chatroom("#js", "Jelena");
 chatroom1.username = "ddd dd  "; */
 
@@ -31,6 +31,7 @@ chatroom.getChats(data =>{
 
 
 //Kada je submit dugme Send pošalji poruku
+
 formMessage.addEventListener('submit' , e => {
     e.preventDefault();
     let message = inputMessage.value;
@@ -56,6 +57,15 @@ formUsername.addEventListener('submit', e =>{
     chatroom.username = newUsername
     localStorage.setItem("username", newUsername);
     formUsername.reset();
+
+    let notifikacija = document.querySelector(".notifikacija");
+    notifikacija.innerHTML = `Korisničko ime je promenjeno u:   ${newUsername}`;
+    notifikacija.style.color = "white";
+    notifikacija.style.display = "block";
+
+setTimeout(() => {
+    notifikacija.style.display = "none";
+}, 3000)
 });
 
 
@@ -76,31 +86,9 @@ navRoom.addEventListener("click", e=>{
         
     }
 
-})
+}) 
 
 
-/*
-formMessage.addEventListener('submit', e => {
-    e.preventDefault();
-   
-    let message = inputMessage.value;
-    if(!message.trim()){
-        alert("Nije moguce poslati praznu poruku")
-    }
-
-    else{
-        chatroom.addChat(message)
-        .then( () => {
-            console.log("Uspešno dodat čet");
-        })
-        .catch( err => {
-            console.log(err);
-        });
-    }
-  
-          inputMessage.value = ""
-});
-*/
 
 
 

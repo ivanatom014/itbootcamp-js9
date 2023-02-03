@@ -14,7 +14,7 @@ export class ChatUI {
         let y = date.getFullYear().toString().slice(-2);
         let h = date.getHours();
         let min = date.getMinutes();
-
+      
         //Dodavanje 0 ispred jednocifrenih vrednosti
         d = String(d).padStart(2,"0");
         m = String(m).padStart(2,"0");
@@ -26,21 +26,35 @@ export class ChatUI {
 
         return strDate;
     }
-    templateLI(data) {
-        // Izvući podatke iz prosleđenog dokumenta (data je dokument) i zapisati ih u formatu
-        // useranme: poruka
-        // time_stamp
-        let date = data.created_at.toDate();
-        let strDate = this.formatDate(date);
 
-        let htmlLI = 
+    templateLI(data) {
+        let date = data.created_at.toDate();
+        
+        let todayMessage = date.toLocaleTimeString([],{hour:'2-digit', minute:'2-digit'});
+
+        if(date.toDateString() === new Date().toDateString()){
+            let htmlLI =
         `<li>
-            <span class="username">${data.username} : </span>
-            <span class="message">${data.message}</span>
-            <div class="date">${strDate}</div>
+            <span class=“username”>${data.username} : </span>
+            <span class=“message”>${data.message}</span>
+            <div class=“date”>${todayMessage}</div>
         </li>`;
         this.list.innerHTML += htmlLI;
+        }
+
+        else {
+            let strDate = this.formatDate(date);
+            let htmlLI =
+        `<li>
+            <span class=“username”>${data.username} : </span>
+            <span class=“message”>${data.message}</span>
+            <div class=“date”>${strDate}</div>
+        </li>`;
+        this.list.innerHTML += htmlLI;
+        }
     }
+
+  
 
     clearUL(){
     

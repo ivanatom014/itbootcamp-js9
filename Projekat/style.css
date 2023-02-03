@@ -7,7 +7,7 @@
 
 body{
    /* background-color: #030331; */
-    background-image: url(./images/1.jpg) ;
+    background-image: url(./images/11.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -50,6 +50,7 @@ section{
 .btn1:hover, .btn:hover {
     background-color: #c0a483;;
 }
+
 
 .btn {
     background-color:#e3912f;
