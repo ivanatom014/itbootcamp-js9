@@ -6,7 +6,10 @@
 }
 
 body{
-    background-color: #030331;
+   /* background-color: #030331; */
+    background-image: url(./images/1.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1, h2 {
     color: #e3912f;;
@@ -14,6 +17,10 @@ h1, h2 {
    
 }
 
+h2{
+    margin-bottom: 25px;
+
+}
 .container {
     margin: auto;
     width: 90%;
@@ -30,6 +37,7 @@ section{
     color: #fff;
     width: 25%;
     float: left;
+   
     text-align: center;
     font-size: 18px;
     display: block;
@@ -39,7 +47,7 @@ section{
     border-radius: 7px;
 }
 
-.btn1:hover {
+.btn1:hover, .btn:hover {
     background-color: #c0a483;;
 }
 
@@ -80,7 +88,7 @@ input:focus, button:focus{
     background-color: #f3dec5;
 } 
 
-.inputi {
+#formMessage {
     position: relative;
    
 }

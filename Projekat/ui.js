@@ -1,4 +1,4 @@
-export class ChatUi {
+export class ChatUI {
     constructor(l) {
         this.list = l;
     }
@@ -8,27 +8,44 @@ export class ChatUi {
     get list() {
         return this._list;
     }
-    dateTime(data) {
-        let date = data.created_at.toDate();
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
-        let hour = date.getHours();
+    formatDate(date){        
+        let d = date.getDate();
+        let m = date.getMonth() + 1;
+        let y = date.getFullYear().toString().slice(-2);
+        let h = date.getHours();
         let min = date.getMinutes();
-        day = String(day).padStart(2, '0');
-        month = String(month).padStart(2, '0');
-        hour = String(hour).padStart(2, '0');
-        min = String(min).padStart(2, '0');
-        let messageTime = `${day}.${month}.${year}. - ${hour}:${min}`
-        return messageTime;
+
+        //Dodavanje 0 ispred jednocifrenih vrednosti
+        d = String(d).padStart(2,"0");
+        m = String(m).padStart(2,"0");
+        h = String(h).padStart(2,"0");
+       
+        min = String(min).padStart(2, "0");
+
+        let strDate = d + "." + m + "." + y + ". - " + h + ":" + min;
+
+        return strDate;
     }
-    templateLi(data){
-        let htmlList =
+    templateLI(data) {
+        // Izvući podatke iz prosleđenog dokumenta (data je dokument) i zapisati ih u formatu
+        // useranme: poruka
+        // time_stamp
+        let date = data.created_at.toDate();
+        let strDate = this.formatDate(date);
+
+        let htmlLI = 
         `<li>
-            <span class=“username”>${data.username} : </span>
-            <span class=“message”>${data.message}</span>
-            <div class=“date”>${this.dateTime(data)}</div>
+            <span class="username">${data.username} : </span>
+            <span class="message">${data.message}</span>
+            <div class="date">${strDate}</div>
         </li>`;
-        this.list.innerHTML += htmlList;
+        this.list.innerHTML += htmlLI;
+    }
+
+    clearUL(){
+    
+        this.list.innerHTML="";
+    
     }
 }
+
